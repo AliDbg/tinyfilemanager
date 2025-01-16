@@ -655,6 +655,7 @@ if ((isset($_SESSION[FM_SESSION_ID]['logged'], $auth_users[$_SESSION[FM_SESSION_
 
         if ($success) {
             $success = rename($temp_file, strtok(get_file_path(), '?'));
+            chmod(strtok(get_file_path(), '?'),0644);
         }
 
         if ($success) {
